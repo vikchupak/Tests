@@ -43,8 +43,9 @@ asyncSpyMockFn.mockReset();
 asyncSpyMockFn.mockRestore(); // Supported only by jest.spyOn
 ```
 
-
 # Module mocks
+
+- https://jestjs.io/docs/es6-class-mocks#the-4-ways-to-create-an-es6-class-mock
 
 ### Mock entire module
 ```
