@@ -68,6 +68,9 @@ jest.mock('./math.js')
     // Example of moking the property with the module original data
     axios.defaults = jest.requireActual('axios').defaults;
     ```
+### Mock module partionaly
+
+https://jestjs.io/docs/mock-functions#mocking-partials
 
 # Manual module mocks
 
