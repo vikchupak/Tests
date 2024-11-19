@@ -1,4 +1,8 @@
-# Sync function mocks
+- jest.fn
+- jest.spyOn
+- jest.mock
+
+# Function mocks
 
 ### Mock func
 
@@ -12,6 +16,7 @@ const mockFn = jest.fn();
 const spyMockFn = jest.spyOn(object, 'greet').mockReturnValue('Hi!');
 ```
 - Spies on an existing function, keeping the original implementation unless overridden.
+- All other methods and properties remain unchanged.
 
 # Async function mocks
 
@@ -63,3 +68,31 @@ jest.mock('./math.js')
     // Example of moking the property with the module original data
     axios.defaults = jest.requireActual('axios').defaults;
     ```
+
+# Manual module mocks
+
+- Provide your own custom implementation of a module in a __mocks__ directory.
+
+Example `__mocks__/math.js` file
+```javascript
+module.exports = { add: jest.fn(() => 5) };
+```
+
+Usage
+```javascript
+jest.mock('./math'); // Automatically uses the manual mock
+const { add } = require('./math');
+expect(add()).toBe(5);
+```
+
+# Class mocks
+
+- The same as module mocks, but with classes
+```javascript
+jest.mock('./User');
+const User = require('./User');
+
+const mockUserInstance = new User();
+mockUserInstance.sayHello.mockReturnValue('Hi!');
+expect(mockUserInstance.sayHello()).toBe('Hi!');
+```
