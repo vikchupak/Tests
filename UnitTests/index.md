@@ -2,6 +2,10 @@
 - jest.spyOn
 - jest.mock
 
+Sugar syntax over the .mock property
+- https://jestjs.io/docs/mock-functions#custom-matchers
+- https://jestjs.io/docs/mock-functions#mock-property
+
 # Function mocks
 
 ### Mock func
