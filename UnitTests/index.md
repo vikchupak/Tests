@@ -12,14 +12,21 @@ Sugar syntax over the .mock property
 
 ```javascript
 const mockFn = jest.fn();
+
+mockFn.mockClear();
+mockFn.mockReset();
 ```
 
 ### Mock object func
 
 ```javascript
 const spyMockFn = jest.spyOn(object, 'greet').mockReturnValue('Hi!');
+
+spyMockFn.mockClear();
+spyMockFn.mockReset();
+spyMockFn.mockRestore(); // Supported only by jest.spyOn
 ```
-- Spies on an existing function, keeping the original implementation unless overridden.
+- Spies on an existing function, keeping the original implementation that can be restore.
 - All other methods and properties remain unchanged.
 
 # Async function mocks
@@ -28,19 +35,12 @@ const spyMockFn = jest.spyOn(object, 'greet').mockReturnValue('Hi!');
 
 ```javascript
 const asyncMockFn = jest.fn().mockResolvedValue(43);
-
-asyncSpyMockFn.mockClear();
-asyncSpyMockFn.mockReset();
 ```
 
 ### Mock object async func
 
 ```javascript
 const asyncSpyMockFn = jest.spyOn(object, 'greet').mockResolvedValue('Hi!');
-
-asyncSpyMockFn.mockClear();
-asyncSpyMockFn.mockReset();
-asyncSpyMockFn.mockRestore(); // Supported only by jest.spyOn
 ```
 
 # Module mocks
