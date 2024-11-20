@@ -1,0 +1,6 @@
+- https://www.youtube.com/watch?v=gA-uNj2FgdM&t=1s  16:00 = > about afterEach
+- https://jestjs.io/docs/mock-functions
+- https://jestjs.io/docs/bypassing-module-mocks
+- https://jestjs.io/docs/es6-class-mocks => search for factory
+- https://medium.com/@rickhanlonii/understanding-jest-mocks-f0046c68e53c
+- https://www.bitovi.com/blog/mocking-modules-in-jest-tests => mocking default and non default modules
