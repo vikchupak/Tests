@@ -102,6 +102,8 @@ expect(add()).toBe(5);
 ### Factory module mock
 
 ```javascript
+// const config = require('config') // this import not needed with factory mock
+
 jest.mock('config', () => ({
   mysql: {
     hostname: 'testhostname'
