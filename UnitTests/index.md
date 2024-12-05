@@ -83,7 +83,7 @@ jest.mock('./math.js')
 
 https://jestjs.io/docs/mock-functions#mocking-partials
 
-# Manual module mock
+### Manual module mock
 
 - Provide your own custom implementation of a module in a __mocks__ directory.
 
@@ -97,6 +97,16 @@ Usage
 jest.mock('./math'); // Automatically uses the manual mock
 const { add } = require('./math');
 expect(add()).toBe(5);
+```
+
+### Factory module mock
+
+```javascript
+jest.mock('config', () => ({
+  mysql: {
+    hostname: 'testhostname'
+  }
+}));
 ```
 
 # Class mocks
