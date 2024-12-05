@@ -68,7 +68,7 @@ import math from "./math";
 jest.mock('./math.js')
 ```
 - Module methods are automatically mocked with `jest.fn()`.
-- Module properties and their values are removed. The properties must be explicitly defined or mocked if needed.
+- Module `properties(NOT methods)` and their values are removed. The properties must be explicitly defined or mocked if needed.
   - ```javascript
     // Example of moking the property with custom data
     axios.defaults = {
