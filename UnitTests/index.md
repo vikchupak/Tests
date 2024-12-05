@@ -53,7 +53,7 @@ Types
 - Mock factory
 - Mock Replacing
 
-### Mock entire module
+### Automatic module mock
 ```
 import axios from 'axios';
 
@@ -79,11 +79,11 @@ jest.mock('./math.js')
     // Example of moking the property with the module original data
     axios.defaults = jest.requireActual('axios').defaults;
     ```
-### Mock module partionaly
+#### Mock module partionaly
 
 https://jestjs.io/docs/mock-functions#mocking-partials
 
-# Manual module mocks
+# Manual module mock
 
 - Provide your own custom implementation of a module in a __mocks__ directory.
 
