@@ -54,7 +54,8 @@ Types
 - Mock Replacing
 
 ### Automatic module mock
-```
+
+```javascript
 import axios from 'axios';
 
 jest.mock('axios');
@@ -62,7 +63,7 @@ jest.mock('axios');
 axios.get.mockResolvedValue({ mockedResult: 'ok' });
 ```
 Or
-```
+```javascript
 import math from "./math";
 
 jest.mock('./math.js')
