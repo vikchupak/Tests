@@ -4,6 +4,7 @@ Let’s complete the trio: **fixtures, seeds, factories**. They’re related, bu
 
 ## 🌱 **Seeds**
 
+* **DB CONTEXT ONLY**
 * **What:** Predefined, static data inserted into a DB.
 * **Purpose:** Ensure the system starts with known values.
 * **Example:** Insert admin user, default roles, countries list.
@@ -22,6 +23,7 @@ await userRepo.insert([
 
 ## 🏭 **Factories**
 
+* **ANY CONTEXT, BUT USUALLY DB**
 * **What:** Code that generates **test entities dynamically**, often randomized.
 * **Purpose:** Quickly produce test data without writing it by hand.
 * **Example:** Create 10 random users for testing.
@@ -48,6 +50,7 @@ export function userFactory(overrides = {}) {
 
 ## 🔧 **Fixtures**
 
+* **ANY CONTEXT**
 * **What:** The **test setup environment** — may include seeds, factories, or even external services.
 * **Purpose:** Put the system into a **known state** before running a test.
 * **Example in NestJS:**
